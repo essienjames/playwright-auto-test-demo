@@ -16,12 +16,11 @@ Before running the tests, ensure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone <my-repo-url>
-   cd <my-repo-name>
+   git clone https://github.com/essienjames/snowplow-demo.git
 
 2. Install dependencies
     ```sh
-   npm install
+   npm ci
    
 3. Install Playwright
     ```sh
@@ -74,17 +73,26 @@ Test failures? Try running in debug mode:
    ├── api/
    │   ├── user-api.spec.ts    # API tests
    ├── ui/
-   │   ├── login.spec.ts       # UI tests
-   │   ├── dashboard.spec.ts
+   │   ├── example.spec.ts       # UI tests
    /utils                      # Utility functions for the tests (e.g., API helpers)
-   /fixtures                   # Test data or mock data to be used in tests
+   /fixtures                   # JSON Schema files and test data for validation
    /playwright.config.ts       # Configuration file defining projects and settings for different test runs (API, UI, browsers)
    /README.md                  # This file
    /package.json               # Project dependencies
+   /.gitignore                 # Specifies files to exclude from version control
 ```
 
 ## 📝 GitHub Actions Workflow
-How to Trigger Manually?
+### Automated Test Runs
+This project includes a Github Actions workflow to automatically execute tests:
+- Runs tests on push requests to main or develop branches.
+- Executes tests at a scheduled time daily.
+- Allows manual triggering for specific test types (api, ui, or all).
+- Caches dependencies to speed up execution.
+- Uploads test artifacts (screenshots, videos, and HTML reports) for debugging.
+
+
+### How to Trigger Manually?
 ```sh
    Go to GitHub → Actions → Playwright Tests
    Click Run workflow
@@ -96,4 +104,4 @@ After the workflow runs, you can download:
 - Videos
 - Playwright HTML Reports (playwright-report)
 
-Happy Testing! 👍
+### Happy Testing! 👍

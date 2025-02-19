@@ -1,4 +1,4 @@
-# Snowplow Demo - Playwright Test Suite Project
+# Demo - Playwright API/UI Test Suite Project
 
 This repository contains automated tests for both API and UI using [Playwright](https://playwright.dev/).
 

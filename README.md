@@ -16,7 +16,7 @@ Before running the tests, ensure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/essienjames/snowplow-demo.git](https://github.com/essienjames/playwright-auto-test-demo.git)
+   git clone https://github.com/essienjames/snowplow-demo.git
 
 2. Install dependencies
     ```sh
